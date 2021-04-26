@@ -10,5 +10,7 @@ export class BasicosComponent {
   nombreLower: string = 'jeff';
   nombreUpper: string = 'JEFF';
   nombreCompleto: string = 'JefferSOn CoSTa';
+
+  fecha: Date = new Date();
   
 }
