@@ -7,16 +7,36 @@
 
     <div class="p-col p-md-6">
         <p-fieldset legend="i18nSelect Pipe" [toggleable]="true">
-            Saludos {{nombre}}, es un placer
-            {{genero | i18nSelect:invitacionMapa}}              
-            a nuestro evento.
+            <p>
+                Saludos {{nombre | titlecase}}, es un placer
+                {{genero | i18nSelect:invitacionMapa}}              
+                a nuestro evento.
+            </p>
+            <button  pButton label="Cambiar Nombre" type="button"  class="p-button-raised p-button-text" (click)="cambiarNombre()"></button>
+           
         </p-fieldset>
     </div>
 
     <div class="p-col p-md-6">
         <p-fieldset legend="i18nPlural Pipe" [toggleable]="true">
-            Actualmente {{clientes.length |i18nPlural:clientesMapa}} .
+            <p>
+                Actualmente {{clientes.length |i18nPlural:clientesMapa}}
+            </p>
+            <button  pButton label="Borrar Cliente" type="button"  class="p-button-raised p-button-text" (click)="borrarCliente()"></button>
         </p-fieldset>
     </div>
 
+
+    <div class="p-col p-md-6">
+        <p-fieldset legend="Slice Pipe" [toggleable]="true">
+            <b>Original</b>
+            <pre>{{clientes}}</pre>
+
+            <b>slices:0:2</b>
+            <pre>{{clientes | slice:0:2}}</pre>
+
+            <b>slices:1:2</b>
+            <pre>{{clientes | slice:1:2}}</pre>
+        </p-fieldset>
+    </div>
 </div>
