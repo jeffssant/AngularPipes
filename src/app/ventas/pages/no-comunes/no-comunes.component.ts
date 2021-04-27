@@ -38,5 +38,13 @@ export class NoComunesComponent  {
     .shift();
   }
 
+  //KeyValuePipe
+
+  persona = {
+    nombre: 'Jeff',
+    edad: 31,
+    dereccion: "São paulo, Sp"
+  }
+
 
 }
