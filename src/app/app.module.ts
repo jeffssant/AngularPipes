@@ -1,3 +1,4 @@
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -26,6 +27,7 @@ registerLocaleData(localeFr);
     SharedModule,
     AppRouterModule, 
     VentasModule,
+    BrowserAnimationsModule
   ],
   providers: [
     {
