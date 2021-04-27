@@ -25,7 +25,7 @@
             <button  pButton label="Borrar Cliente" type="button"  class="p-button-raised p-button-text" (click)="borrarCliente()"></button>
         </p-fieldset>
     </div>
-    
+
     <div class="p-col p-md-6">
         <p-fieldset legend="Json Pipe" [toggleable]="true">
             <pre>{{heroes | json}}</pre>
@@ -43,9 +43,7 @@
             <b>slices:1:2</b>
             <pre>{{clientes | slice:1:2}}</pre>
         </p-fieldset>
-    </div>
-
-   
+    </div>   
 
     <div class="p-col p-md-6">
         <p-fieldset legend="KeyValue Pipe" [toggleable]="true">
@@ -54,6 +52,16 @@
                    <b> {{item.key | titlecase }}:</b> {{item.value}}
                 </li>
             </ul>
+        </p-fieldset>
+    </div>
+
+    <div class="p-col p-md-6">
+        <p-fieldset legend="Async Pipe" [toggleable]="true">
+            <pre>{{miObservable | async}}</pre>
+
+
+            <pre *ngIf="!(valorPromessa | async)">Resolviendo promessa</pre>
+            <pre>{{valorPromessa | async}}</pre>
         </p-fieldset>
     </div>
 
