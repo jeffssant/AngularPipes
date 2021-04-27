@@ -8,9 +8,11 @@ import { VentasModule } from './ventas/ventas.module';
 
 // Cambiar el locale de la app
 import localePt from '@angular/common/locales/pt';
+import localeFr from '@angular/common/locales/fr';
 import {registerLocaleData} from '@angular/common';
 
 registerLocaleData(localePt);
+registerLocaleData(localeFr);
 
 
 //PrimeNg
